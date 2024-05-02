@@ -4286,6 +4286,9 @@ again:	if (blktop >= SIZEOF_hdr_cpio &&
 	} else if (!Aflag && blktop > 2 && memcmp(blkbuf, "\37\213", 2) == 0 &&
 			redirect("gzip", "-cd") == 0) {
 		goto zip;
+	} else if (!Aflag && blktop > 6 && memcmp(blkbuf, "\375\067\172\130\132\000", 6) == 0 &&
+			redirect("xzcat", NULL) == 0) {
+		goto zip;
 	} else if (!Aflag && blktop > 4 &&
 			memcmp(blkbuf, "\355\253\356\333", 4) == 0 &&
 			redirect("rpm2cpio", "-") == 0) {
