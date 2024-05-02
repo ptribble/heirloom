@@ -19,7 +19,7 @@
 .\"
 .\" 3. This notice may not be removed or altered from any source distribution.
 .\" Sccsid @(#)pax.1	1.37 (gritter) 9/5/05
-.TH PAX 1 "9/5/05" "Heirloom Toolchest" "User Commands"
+.TH PAX 1 "May 2, 2024" "Heirloom Toolchest" "User Commands"
 .SH NAME
 pax \- portable archive interchange
 .SH SYNOPSIS
@@ -256,9 +256,6 @@ Follow symbolic links when reading files with
 .I \-w
 or
 .IR \-rw .
-.B /usr/posix2001/bin/pax
-terminates immediately when it
-detects a symbolic link loop with this option.
 .TP
 .B \-n
 If any
@@ -306,14 +303,6 @@ If file ownership is preserved,
 tries to set the group ownerships to those specified in the archive
 or the original hierarchy, respectively,
 regardless of the privileges of the invoking user.
-.BR /usr/5bin/pax ,
-.BR /usr/5bin/s42/pax ,
-and
-.B /usr/5bin/posix/pax
-try to set the user ownerships only if invoked by the super-user;
-if invoked by regular users,
-.B /usr/5bin/posix2001/pax
-will produce an error for any file that is not owned by the invoking user.
 .TP
 \fB\-s\ /\fIregular expression\fB/\fIreplacement\fB/\fR[\fBgp\fR]
 Modifies file names in a manner similar to that described in
