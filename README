@@ -1,3 +1,15 @@
+This is a copy of the Heirloom Toolchest, from the downloaded file
+heirloom-070715.tar.bz2, which was located at
+https://sourceforge.net/projects/heirloom/
+
+The aim is to keep it minimally modified for building select tools
+on current illumos distributions, specifically Tribblix. Most of the
+tools aren't interesting on illumos, because we have the originals
+already.
+
+The original README text is below.
+
+
 README file for the Heirloom Toolchest
 ======================================
 
